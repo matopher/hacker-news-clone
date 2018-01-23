@@ -22,7 +22,7 @@ export default IndexPage;
 
 export const query = graphql`
 	query StoriesQuery {
-		allHnStory {
+		allHnStory(sort: { fields: [score], order: DESC }) {
 			edges {
 				node {
 					title
